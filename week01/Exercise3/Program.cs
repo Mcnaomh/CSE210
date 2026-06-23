@@ -1,9 +1,35 @@
 using System;
+using Microsoft.VisualBasic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Exercise3 Project.");
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(1, 11);
+        int numGuess = 0;
+        
+        while (numGuess != number)
+        {   
+            Console.Write("What is your guess? ");
+            string answer = Console.ReadLine();
+            numGuess = int.Parse(answer);     
+            
+            if (numGuess > number)
+            {
+                Console.WriteLine("Lower");
+            }
+            else if (numGuess < number)
+            {
+                Console.WriteLine("Higher");
+            }
+            else
+            {
+                if (numGuess == number)
+                {
+                    Console.WriteLine("You guessed it!");
+                } 
+            }
+        }   
     }
 }
