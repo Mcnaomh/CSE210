@@ -27,10 +27,7 @@ class Program
             letter = "D";
         }
         else
-            if (numericGrade < 60)
-            {
-                letter = "F";
-            }
+            letter = "F";
         
         Console.WriteLine($"Your grade is: {letter}");
         
